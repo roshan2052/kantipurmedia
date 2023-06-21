@@ -39,22 +39,22 @@
                             <a class="nav-link scroll" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link scroll" href="#">
                                 Blog
                             </a>
-                            <div class="dropdown-menu list-unstyled hotline-dropdown" aria-labelledby="navbarDropdownMenu">
-                                <ul class="dropdown-menu-list list-unstyled" id="hotline-dropdown-list">
-                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="single-post.html">Single Post</a></li>
-                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="infinite-scroll.html">Infinite Scroll</a></li>
-                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="load-more.html">Load More</a></li>
-                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="one-column.html">One Column</a></li>
-                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="two-column.html">Two Column</a></li>
-                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="three-column.html">Three Column</a></li>
-                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="three-colum-sidbar.html">Three Column Sidebar</a></li>
-                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="four-column.html">Four Column</a></li>
-                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="six-colum-full-wide.html">Six Column</a></li>
-                                </ul>
-                            </div>
+{{--                            <div class="dropdown-menu list-unstyled hotline-dropdown" aria-labelledby="navbarDropdownMenu">--}}
+{{--                                <ul class="dropdown-menu-list list-unstyled" id="hotline-dropdown-list">--}}
+{{--                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="single-post.html">Single Post</a></li>--}}
+{{--                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="infinite-scroll.html">Infinite Scroll</a></li>--}}
+{{--                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="load-more.html">Load More</a></li>--}}
+{{--                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="one-column.html">One Column</a></li>--}}
+{{--                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="two-column.html">Two Column</a></li>--}}
+{{--                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="three-column.html">Three Column</a></li>--}}
+{{--                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="three-colum-sidbar.html">Three Column Sidebar</a></li>--}}
+{{--                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="four-column.html">Four Column</a></li>--}}
+{{--                                    <li class="nav-item"><a class="dropdown-item scroll hotline-menu" href="six-colum-full-wide.html">Six Column</a></li>--}}
+{{--                                </ul>--}}
+{{--                            </div>--}}
                         </li>
                     </ul>
                 </div>
