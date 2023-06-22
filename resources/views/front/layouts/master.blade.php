@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/css/custom-style.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/css/special-classes.css') }}" type="text/css">
+    @stack('css')
 </head>
 <body>
 
@@ -36,5 +37,6 @@
 <script src="{{ asset('assets/js/wow.js') }}"></script>
 <script>new WOW().init();</script>
 <script src="{{ asset('assets/js/counter-script.js') }}"></script>
+@stack('js')
 </body>
 </html>

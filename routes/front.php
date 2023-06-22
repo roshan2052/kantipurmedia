@@ -28,3 +28,19 @@ Route::get('/team', function (){
 Route::get('/testimonials', function (){
     return view('front.testimonials');
 });
+
+Route::get('/services', function (){
+    return view('front.services');
+});
+
+Route::get('/contact-us', function (){
+    return view('front.contact');
+});
+
+Route::get('/blogs', function (){
+    return view('front.blogs');
+});
+
+Route::get('/blogs/{slug}', function (){
+    return view('front.single_post');
+});

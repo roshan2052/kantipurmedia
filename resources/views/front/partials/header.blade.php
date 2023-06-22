@@ -21,7 +21,7 @@
                             <a class="nav-link scroll" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll" href="services.html">Services</a>
+                            <a class="nav-link scroll" href="/services">Services</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -36,11 +36,11 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll" href="contact.html">Contact</a>
+                            <a class="nav-link scroll" href="/contact-us">Contact</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link scroll" href="#">
-                                Blog
+                            <a class="nav-link scroll" href="/blogs">
+                                Blogs
                             </a>
 {{--                            <div class="dropdown-menu list-unstyled hotline-dropdown" aria-labelledby="navbarDropdownMenu">--}}
 {{--                                <ul class="dropdown-menu-list list-unstyled" id="hotline-dropdown-list">--}}
