@@ -5,7 +5,7 @@
             <div class="col-xl-5 col-lg-4 col-md-5 col-sm-6 text-sm-left text-center">
                 <div class="footer-logo-content">
                     <figure class="footer-logo">
-                        <img class="img-fluid" src="/assets/images/humanx-logo.png" alt="" style="width: 200px">
+                        <img class="img-fluid" src="assets/images/humanx-logo.png" alt="" style="width: 200px">
                     </figure>
                     <p class="text-size-16 mb-lg-4 mb-md-3 mb-3">We help business excel the experience delivered to customer, employee and users.</p>
                     <ul class="footer-logo-content-listing p-0 m-0">
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <figure class="footer-secrion-shape-img-1 mb-0 position-absolute">
-                <img class="img-fluid" src="/assets/images/footer-section-shape-img-1.png" alt="">
+                <img class="img-fluid" src="assets/images/footer-section-shape-img-1.png" alt="">
             </figure>
         </div>
     </div>

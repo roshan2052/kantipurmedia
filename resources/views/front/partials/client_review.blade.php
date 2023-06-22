@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row position-relative">
             <figure class="review-section-shape-img-1 position-absolute mb-0">
-                <img class="img-fluid" src="/assets/images/review-section-shape-img-1.png" alt="">
+                <img class="img-fluid" src="assets/images/review-section-shape-img-1.png" alt="">
             </figure>
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="review-section-box w-100 position-relative">
@@ -16,10 +16,10 @@
             <div class="col-lg-10">
                 <div class="review-section-outer position-relative">
                     <figure class="review-section-quote-img-1 mb-0 position-absolute">
-                        <img class="img-fluid" src="/assets/images/review-section-quote-img-1.png" alt="">
+                        <img class="img-fluid" src="assets/images/review-section-quote-img-1.png" alt="">
                     </figure>
                     <figure class="review-section-quote-img-2 mb-0 position-absolute">
-                        <img class="img-fluid" src="/assets/images/review-section-quote-img-2.png" alt="">
+                        <img class="img-fluid" src="assets/images/review-section-quote-img-2.png" alt="">
                     </figure>
                     <div class="review-section-inner w-100">
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -28,7 +28,7 @@
                                     <div class="position-relative">
                                         <figure
                                             class="review-section-review-img-1 mb-0 position-relative d-inline-block">
-                                            <img class="img-fluid" src="/assets/images/review-section-review-img-1.png"
+                                            <img class="img-fluid" src="assets/images/review-section-review-img-1.png"
                                                  alt="">
                                         </figure>
                                         <p class="text-white">We have been using Kantipur Management Private Limited for Employee Outsourcing Service for Customer Service Department and we have always satisfied with their performance, customer service knowledge and the way of performance. They have been working with our organization since 2015.</p>
@@ -41,7 +41,7 @@
                                     <div class="position-relative">
                                         <figure
                                             class="review-section-review-img-1 mb-0 position-relative d-inline-block">
-                                            <img class="img-fluid" src="/assets/images/review-section-review-img-1.png"
+                                            <img class="img-fluid" src="assets/images/review-section-review-img-1.png"
                                                  alt="">
                                         </figure>
                                         <p class="text-white">We have been using Kantipur Management Private Limited for Employee Outsourcing Service for Customer Service Department and we have always satisfied with their performance, customer service knowledge and the way of performance. They have been working with our organization since 2015.</p>
@@ -54,7 +54,7 @@
                                     <div class="position-relative">
                                         <figure
                                             class="review-section-review-img-1 mb-0 position-relative d-inline-block">
-                                            <img class="img-fluid" src="/assets/images/review-section-review-img-1.png"
+                                            <img class="img-fluid" src="assets/images/review-section-review-img-1.png"
                                                  alt="">
                                         </figure>
                                         <p class="text-white">We have been using Kantipur Management Private Limited for Employee Outsourcing Service for Customer Service Department and we have always satisfied with their performance, customer service knowledge and the way of performance. They have been working with our organization since 2015.</p>

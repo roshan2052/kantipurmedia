@@ -57,7 +57,7 @@
             <div class="col-12">
                 <div class="talent-section-box position-relative text-sm-left text-center">
                     <figure class="talent-section-shape-img-1 position-absolute mb-0">
-                        <img class="img-fluid" src="/assets/images/talent-section-shape-img-1.png" alt="">
+                        <img class="img-fluid" src="assets/images/talent-section-shape-img-1.png" alt="">
                     </figure>
                     <h2 class="mb-lg-4 mb-md-3 mb-2">Do you want to develope Your talent with us? <span class="color">Welcome</span>
                     </h2>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <figure class="talent-section-shape-img-2 position-absolute mb-0">
-                        <img class="img-fluid" src="/assets/images/talent-section-shape-img-2.png" alt="">
+                        <img class="img-fluid" src="assets/images/talent-section-shape-img-2.png" alt="">
                     </figure>
                 </div>
             </div>
