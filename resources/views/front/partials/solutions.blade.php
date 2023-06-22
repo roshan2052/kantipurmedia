@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-12 text-center">
                             <figure>
-                                <img src="assets/images/solution-section-plan-box-img-2.png" alt="">
+                                <img src="{{ asset('assets/images/solution-section-plan-box-img-2.png') }}" alt="">
                             </figure>
                         </div>
                     </div>

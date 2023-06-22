@@ -4,18 +4,18 @@
             <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
                 <div class="interaction-section-img-content position-relative">
                     <figure class="interaction-section-shape-img-1 mb-0 position-absolute">
-                        <img class="img-fluid" src="assets/images/interaction-section-shape-img-1.png" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/images/interaction-section-shape-img-1.png') }}" alt="">
                     </figure>
                     <figure class="interaction-section-main-img mb-0 position-relative wow bounceIn"
                             data-wow-duration="2s">
-                        <img class="img-fluid" src="assets/images/interaction-section-main-img.png" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/images/interaction-section-main-img.png') }}" alt="">
                     </figure>
                     <figure class="interaction-section-graph-img mb-0 position-absolute wow fadeInUp"
                             data-wow-duration="2s">
-                        <img class="img-fluid" src="assets/images/interaction-section-graph-img.png" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/images/interaction-section-graph-img.png') }}" alt="">
                     </figure>
                     <figure class="interaction-section-shape-img-3 mb-0 position-absolute">
-                        <img class="img-fluid" src="assets/images/interaction-section-shape-img-3.png" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/images/interaction-section-shape-img-3.png') }}" alt="">
                     </figure>
                 </div>
             </div>

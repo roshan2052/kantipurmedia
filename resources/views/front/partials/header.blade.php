@@ -4,7 +4,7 @@
             <nav class="navbar navbar-expand-lg navbar-light p-0">
                 <a class="navbar-brand" href="index.html">
                     <figure class="navbar-logo mb-0">
-                        <img class="img-fluid" src="assets/images/humanx-logo.png" alt="" style="width: 200px">
+                        <img class="img-fluid" src="{{ asset('assets/images/humanx-logo.png') }}" alt="" style="width: 200px">
                     </figure>
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
