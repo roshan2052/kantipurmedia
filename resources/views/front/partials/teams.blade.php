@@ -30,7 +30,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-12 mb-md-0 mb-4 text-center">
                 <div class="teams-section-plan-box">
                     <figure>
-                        <img class="img-fluid" src="{{ asset('assets/images/team-plan-box-img-2.png" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/images/team-plan-box-img-2.png') }}" alt="">
                     </figure>
                     <h4 class="font-weight-bold">Alex Herington</h4>
                     <span class="d-block">System Administrator</span>
@@ -47,7 +47,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-12 text-center">
                 <div class="teams-section-plan-box">
                     <figure>
-                        <img class="img-fluid" src="{{ asset('assets/images/team-plan-box-img-3.png" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/images/team-plan-box-img-3.png') }}" alt="">
                     </figure>
                     <h4 class="font-weight-bold">Kate Paterson</h4>
                     <span class="d-block">Operation Manager</span>
@@ -64,7 +64,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-12 mb-md-0 mb-4 text-center">
                 <div class="teams-section-plan-box">
                     <figure>
-                        <img class="img-fluid" src="{{ asset('assets/images/team-plan-box-img-2.png" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/images/team-plan-box-img-2.png') }}" alt="">
                     </figure>
                     <h4 class="font-weight-bold">Alex Herington</h4>
                     <span class="d-block">System Administrator</span>
