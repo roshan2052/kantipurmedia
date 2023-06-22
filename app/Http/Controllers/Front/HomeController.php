@@ -19,7 +19,7 @@ class HomeController extends Controller
 {
     public function all(Request $request)
     {
-        if(config('Reading.show_on_front') == 'Page')
+        if(config('Reading.show_on_front') == 'asd')
         {
             $homepage = Page::where('slug', 'like', config('Reading.home_page'))->first();
 
@@ -31,9 +31,9 @@ class HomeController extends Controller
 
 
         if(optional(Auth::user())->hasRole(config('constants.roles.admin'))) {
-            $blogs   = Blog::with('blog_meta', 'blog_seo', 'blog_categories', 'blog_tags', 'user')->where(['status' => 1])->latest()->paginate(config('Reading.nodes_per_page'));
+            $blogs   = Blog::with('blog_metas', 'blog_seo', 'blog_categories', 'blog_tags', 'user')->where(['status' => 1])->latest()->paginate(config('Reading.nodes_per_page'));
         }else {
-            $blogs   = Blog::with('blog_meta', 'blog_seo', 'blog_categories', 'blog_tags', 'user')->where(['status' => 1])->where('visibility', '!=', 'Pr')->latest()->paginate(config('Reading.nodes_per_page'));
+            $blogs   = Blog::with('blog_metas', 'blog_seo', 'blog_categories', 'blog_tags', 'user')->where(['status' => 1])->where('visibility', '!=', 'Pr')->latest()->paginate(config('Reading.nodes_per_page'));
         }
 
         return view('front.index', compact('blogs'));
