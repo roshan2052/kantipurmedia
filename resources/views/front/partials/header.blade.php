@@ -2,7 +2,7 @@
     <div class="main-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <figure class="navbar-logo mb-0">
                         <img class="img-fluid" src="assets/images/humanx-logo.png" alt="" style="width: 200px">
                     </figure>
@@ -15,7 +15,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item active">
-                            <a class="nav-link scroll" href="index.html">Home</a>
+                            <a class="nav-link scroll" href="/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link scroll" href="about.html">About</a>
@@ -29,9 +29,9 @@
                             </a>
                             <div class="dropdown-menu list-unstyled hotline-dropdown" aria-labelledby="navbarDropdown">
                                 <ul class="dropdown-menu-list list-unstyled">
-                                    <li><a class="dropdown-item scroll hotline-menu" href="faq.html">FAQ</a></li>
-                                    <li><a class="dropdown-item scroll hotline-menu" href="testimonials.html">Testimonials</a></li>
-                                    <li><a class="dropdown-item scroll hotline-menu" href="team.html">Team</a></li>
+                                    <li><a class="dropdown-item scroll hotline-menu" href="/faq">FAQ</a></li>
+                                    <li><a class="dropdown-item scroll hotline-menu" href="/testimonials">Testimonials</a></li>
+                                    <li><a class="dropdown-item scroll hotline-menu" href="/team">Team</a></li>
                                 </ul>
                             </div>
                         </li>
