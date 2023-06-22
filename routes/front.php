@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\BlogsController;
+use App\Http\Controllers\Admin\BlogCategoriesController;
+use App\Http\Controllers\Admin\BlogTagsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,15 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-require __DIR__.'/front.php';
 
-require __DIR__.'/acl.php';
-require __DIR__.'/admin.php';
-require __DIR__.'/fortify.php';
-require __DIR__.'/blog.php';
-require __DIR__.'/page.php';
-require __DIR__.'/menu.php';
-require __DIR__.'/tools.php';
-require __DIR__.'/configuration.php';
+Route::get('/faq', function (){
+    return view('front.faq');
+});
 
+Route::get('/team', function (){
+    return view('front.team');
+});
 
+Route::get('/testimonials', function (){
+    return view('front.testimonials');
+});
