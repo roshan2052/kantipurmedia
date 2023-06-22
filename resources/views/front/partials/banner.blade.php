@@ -24,7 +24,7 @@
                             <a class="call-icon" href="#"><i class="fas fa-phone-alt"></i></a>
                         </div>
                         <figure>
-                            <img src="assets/images/banner-call-img.png" alt="">
+                            <img src="/assets/images/banner-call-img.png" alt="">
                         </figure>
                         <span class="banner-call-heading d-block text-white">Jhon Smith</span>
                         <span class="banner-call-text d-block text-white">United State</span>
@@ -38,18 +38,18 @@
                         </ul>
                     </div>
                     <figure class="banner-arrow-img mb-0 position-absolute wow slideInRight" data-wow-duration="2s">
-                        <img src="assets/images/banner-arrow-img.png" alt="">
+                        <img src="/assets/images/banner-arrow-img.png" alt="">
                     </figure>
                     <div class="banner-map-img position-absolute wow swing" data-wow-duration="2s">
                         <figure class="banner-map-img-inner mb-0">
-                            <img src="assets/images/banner-map-img.png" alt="">
+                            <img src="/assets/images/banner-map-img.png" alt="">
                         </figure>
                         <figure class="banner-map-icon mb-0 position-absolute">
-                            <img src="assets/images/map-icon.png" alt="">
+                            <img src="/assets/images/map-icon.png" alt="">
                         </figure>
                     </div>
                     <figure class="banner-img mb-0 position-relative">
-                        <img src="assets/images/home-banner-img.png" alt="">
+                        <img src="/assets/images/home-banner-img.png" alt="">
                     </figure>
                 </div>
             </div>

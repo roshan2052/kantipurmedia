@@ -5,7 +5,7 @@
                 <h2 class="mb-lg-4 mb-md-3 mb-2">Latest Blog & Articles</h2>
                 <p class="mb-0">Stay in the loop and never miss a beat with our timely updates. We're committed to keeping you informed about our latest developments and ensuring you stay connected with all the important news and events.</p>
                 <figure class="blog-section-shape-img-1 mb-0 position-absolute">
-                    <img class="img-fluid" src="{{ asset('assets/images/blog-section-shape-img-1.png') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('/assets/images/blog-section-shape-img-1.png') }}" alt="">
                 </figure>
             </div>
         </div>
@@ -13,7 +13,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-md-0 mb-4 text-center">
                 <div class="blog-section-plan-box">
                     <figure>
-                        <img class="img-fluid" src="{{ asset('assets/images/blog-post-img-1.png') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('/assets/images/blog-post-img-1.png') }}" alt="">
                     </figure>
                     <ul class="blog-plan-box-listing p-0">
                         <li class="list-unstyled d-inline-block">
@@ -37,7 +37,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-md-0 mb-4 text-center">
                 <div class="blog-section-plan-box">
                     <figure>
-                        <img class="img-fluid" src="{{ asset('assets/images/blog-post-img-2.png') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('/assets/images/blog-post-img-2.png') }}" alt="">
                     </figure>
                     <ul class="blog-plan-box-listing p-0">
                         <li class="list-unstyled d-inline-block"><a class="d-inline-block text-decoration-none meta"
@@ -58,7 +58,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center">
                 <div class="blog-section-plan-box">
                     <figure>
-                        <img class="img-fluid" src="{{ asset('assets/images/blog-post-img-3.png') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('/assets/images/blog-post-img-3.png') }}" alt="">
                     </figure>
                     <ul class="blog-plan-box-listing p-0">
                         <li class="list-unstyled d-inline-block">

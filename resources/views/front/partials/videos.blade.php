@@ -6,14 +6,14 @@
                     <div class="video-content text-right position-relative">
                         <div class="videoCoverImage">
                             <div onclick="thevid=document.getElementById('thevideo'); thevid.style.display='block'; this.style.display='none'">
-                                <img class="thumb img-fluid" style="cursor: pointer;" src="assets/images/vide-section-img.png" alt="">
+                                <img class="thumb img-fluid" style="cursor: pointer;" src="/assets/images/vide-section-img.png" alt="">
                             </div>
                             <div id="thevideo" style=" display: none; ">
                                 <iframe width="490" height="400" src="https://video-previews.elements.envatousercontent.com/h264-video-previews/1130042.mp4" allowfullscreen=""></iframe>
                             </div>
                         </div>
                         <figure class="video-section-shape-img mb-0 position-absolute">
-                            <img class="img-fluid" src="assets/images/video-section-shape-img.png" alt="">
+                            <img class="img-fluid" src="/assets/images/video-section-shape-img.png" alt="">
                         </figure>
                     </div>
                 </div>

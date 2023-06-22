@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-12 text-center">
                             <figure>
-                                <img src="assets/images/solution-section-plan-box-img-2.png" alt="">
+                                <img src="/assets/images/solution-section-plan-box-img-2.png" alt="">
                             </figure>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
             {{--                    <div class="row">--}}
             {{--                        <div class="col-lg-3 col-12">--}}
             {{--                            <figure>--}}
-            {{--                                <img src="assets/images/solution-section-plan-box-img-2.png" alt="">--}}
+            {{--                                <img src="/assets/images/solution-section-plan-box-img-2.png" alt="">--}}
             {{--                            </figure>--}}
             {{--                        </div>--}}
             {{--                        <div class="col-lg-9 col-12">--}}
@@ -54,7 +54,7 @@
             {{--                    <div class="row">--}}
             {{--                        <div class="col-lg-3 col-12">--}}
             {{--                            <figure>--}}
-            {{--                                <img src="assets/images/solution-section-plan-box-img-3.png" alt="">--}}
+            {{--                                <img src="/assets/images/solution-section-plan-box-img-3.png" alt="">--}}
             {{--                            </figure>--}}
             {{--                        </div>--}}
             {{--                        <div class="col-lg-9 col-12">--}}

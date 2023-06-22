@@ -4,7 +4,7 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 order-xl-1 order-lg-1 order-md-1 order-sm-2 order-2">
                 <div class="customer-base-section-text position-relative wow bounceIn" data-wow-duration="2s">
                     <figure class="customer-base-section-shape-img-1 mb-0 position-absolute">
-                        <img class="img-fluid" src="assets/images/customer-base-section-shape-img-1.png" alt="">
+                        <img class="img-fluid" src="/assets/images/customer-base-section-shape-img-1.png" alt="">
                     </figure>
                     <h2 class="mb-lg-4 mb-md-3 mb-2">Our Story</h2>
                     <h4 class="mb-lg-4 mb-2">HumanX is preparing to support your journey of enhanced experience.</h4>
