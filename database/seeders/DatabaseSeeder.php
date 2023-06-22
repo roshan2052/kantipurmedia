@@ -384,13 +384,13 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name'          => 'Theme.select_theme',
-                'value'         => 'w3itexperts/bodyshape',
+                'value'         => 'w3cms/bodyshape',
                 'title'         => '',
                 'description'   => '',
                 'input_type'    => 'radio',
                 'editable'      => 1,
                 'weight'        => 31,
-                'params'        => ':default,w3itexperts/bodyshape:Theme 1',
+                'params'        => ':default,w3cms/bodyshape:Theme 1',
                 'order'         => 31
             ],
             [

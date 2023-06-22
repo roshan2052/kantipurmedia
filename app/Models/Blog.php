@@ -41,7 +41,7 @@ class Blog extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function blog_meta()
+    public function blog_metas()
     {
         return $this->hasMany(BlogMeta::class, 'blog_id', 'id');
     }

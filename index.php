@@ -32,6 +32,4 @@ if (version_compare(phpversion(), "8.0", "<=")) {
 }
 
 
-
-
 require_once __DIR__.'/public/index.php';
