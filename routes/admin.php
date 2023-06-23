@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\RolesController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FaqsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,5 +42,6 @@ Route::middleware(['auth:sanctum', 'verified', 'permissions'])->prefix('admin')-
 	Route::post('/roles/update/{id}', [RolesController::class, 'update'])->name('admin.roles.update');
 	Route::get('/roles/delete/{id}', [RolesController::class, 'destroy'])->name('admin.roles.delete');
 
+    Route::resource('faqs', FaqsController::class)->names('admin.faqs');
 
 });

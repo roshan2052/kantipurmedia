@@ -11,12 +11,12 @@
     <meta name="robots" content="" />
     <meta name="description" content="@yield('page_description', $page_description ?? '')" />
     <meta name="format-detection" content="telephone=no">
-    
-    <title>{{ config('Site.title') ? config('Site.title') : config('dz.name') ; }} | @yield('title', $page_title ?? '')</title>
+
+    <title>{{ config('Site.title') ? config('Site.title') : config('dz.name') }} | @yield('title', $page_title ?? '')</title>
     <!-- Favicon icon -->
     @if(config('Site.favicon'))
         <link rel="icon" type="image/png" href="{{ asset('storage/configuration-images/'.config('Site.favicon')) }}">
-    @else 
+    @else
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon.png') }}">
     @endif
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" type="text/css"/>
@@ -24,21 +24,21 @@
     @php
         $action = DzHelper::controller().'_'.DzHelper::action();
     @endphp
-    @if(isset($action) && !empty(config('dz.public.pagelevel.css.'.$action))) 
+    @if(isset($action) && !empty(config('dz.public.pagelevel.css.'.$action)))
         @foreach(config('dz.public.pagelevel.css.'.$action) as $style)
             <link href="{{ asset($style) }}" rel="stylesheet" type="text/css"/>
         @endforeach
-    @endif  
+    @endif
 
     {{-- Global Theme Styles (used by all pages) --}}
-    @if(!empty(config('dz.public.global.css'))) 
+    @if(!empty(config('dz.public.global.css')))
         @foreach(config('dz.public.global.css') as $style)
             <link href="{{ asset($style) }}" rel="stylesheet" type="text/css"/>
         @endforeach
     @endif
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-    
+
 
 </head>
 
@@ -90,14 +90,14 @@
         <!--**********************************
             Header start
         ***********************************-->
-        
+
           @include('admin.elements.header')
-		
-		
+
+
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
-        
+
         <!--**********************************
             Sidebar start
         ***********************************-->
@@ -105,7 +105,7 @@
         <!--**********************************
             Sidebar end
         ***********************************-->
-		
+
         <!--**********************************
             Content body start kri
         ***********************************-->
@@ -122,9 +122,9 @@
         <!--**********************************
             Footer start
         ***********************************-->
-        
+
 		@include('admin.elements.footer')
-		
+
         <!--**********************************
             Footer end
         ***********************************-->
@@ -233,6 +233,6 @@
                 <script src="{{ asset($script) }}" type="text/javascript"></script>
         @endforeach
     @endif
-    
+
 </body>
 </html>

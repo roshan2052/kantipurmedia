@@ -2,11 +2,10 @@
 	Sidebar Fixed
 ***********************************-->
 
-
 @php
     $current_user   = auth()->user();
     $user_name      = isset($current_user->full_name) ? $current_user->full_name : '';
-    $user_email         = isset($current_user->email) ? $current_user->email : '';
+    $user_email     = isset($current_user->email) ? $current_user->email : '';
     $userId         = isset($current_user->id) ? $current_user->id : '';
     $userImg        = HelpDesk::user_img($current_user->profile);
 @endphp
@@ -81,7 +80,16 @@
             </li>
             @endcanany
 
-
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-049-copy"></i>
+                    <span class="nav-text">Faq's</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('admin.faqs.index') }}">List</a></li>
+                    <li><a href="{{ route('admin.faqs.create') }}">Add New</a></li>
+                </ul>
+            </li>
 
             <li class="nav-label">{{ __('Admin') }}</li>
 
@@ -146,38 +154,6 @@
                 </ul>
             </li>
             @endcanany
-
-           
-
-            
-
-            <li class="nav-label">{{ __('APPEARENCE') }}</li>
-            
-            <li>
-                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-162-edit"></i>
-                    <span class="nav-text">{{ __('Appearence') }}</span>
-                </a>
-                <ul aria-expanded="false">
-                    @can('Controllers > MenusController > admin_index')
-                    <li><a href="{{ route('menu.admin.admin_index') }}">{{ __('Menus') }}</a></li>
-                    @endcan
-                    <li><a href="{{ route('themes.admin.index') }}">{{ __('Themes') }}</a></li>
-                    <li><a href="javascript:void(0);" class="bg-light">{{ __('Widgets') }} <span class="badge badge-xs badge-danger">{{ __('Coming Soon') }}</span></a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-088-tools"></i>
-                    <span class="nav-text">{{ __('Tools') }}</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="{{ route('tools.admin.export') }}">{{ __('Export') }}</a></li>
-                    <li><a href="{{ route('tools.admin.import') }}">{{ __('Import') }}</a></li>
-                    <li><a href="javascript:void(0);" class="bg-light">{{ __('Site Health') }} <span class="badge badge-xs badge-danger">{{ __('Coming Soon') }}</span></a></li>
-                </ul>
-            </li>
 
             @php
                 $configuration_menu = HelpDesk::configuration_menu();
