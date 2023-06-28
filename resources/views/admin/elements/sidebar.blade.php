@@ -27,15 +27,10 @@
         <ul class="metismenu" id="menu">
 
             <li>
-                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <a class="ai-icon" href="{!! url('/admin'); !!}">
                     <i class="flaticon-141-home"></i>
                     <span class="nav-text">{{ __('Dashboard') }}</span>
                 </a>
-                <ul aria-expanded="false">
-                    <li class="{{ request()->is('admin') ? 'mm-active' : '' }}">
-                        <a href="{!! url('/admin'); !!}">{{ __('Dashboard') }}</a>
-                    </li>
-                </ul>
             </li>
 
             <li class="nav-label">{{ __('CMS') }}</li>
@@ -82,7 +77,51 @@
 
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-049-copy"></i>
+                    <i class="fas fa-user"></i>
+                    <span class="nav-text">Testimonials</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('admin.testimonials.index') }}">List</a></li>
+                    <li><a href="{{ route('admin.testimonials.create') }}">Add New</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fas fa-person-booth"></i>
+                    <span class="nav-text">Teams</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('admin.teams.index') }}">List</a></li>
+                    <li><a href="{{ route('admin.teams.create') }}">Add New</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fas fa-server"></i>
+                    <span class="nav-text">Services</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('admin.services.index') }}">List</a></li>
+                    <li><a href="{{ route('admin.services.create') }}">Add New</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fas fa-building"></i>
+                    <span class="nav-text">Clients</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('admin.clients.index') }}">List</a></li>
+                    <li><a href="{{ route('admin.clients.create') }}">Add New</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fas fa-question"></i>
                     <span class="nav-text">Faq's</span>
                 </a>
                 <ul aria-expanded="false">

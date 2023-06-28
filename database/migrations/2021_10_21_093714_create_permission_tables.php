@@ -34,7 +34,7 @@ class CreatePermissionTables extends Migration
             $table->enum('type', ['pre-define', 'user-define'])->default('user-define'); // For MySQL 8.0 use string('guard_name', 125);
             $table->timestamps();
 
-            $table->unique(['name', 'guard_name']);
+            $table->unique(['name']);
 
             $table->foreign('temp_permission_id')
                 ->references('id')
@@ -56,7 +56,7 @@ class CreatePermissionTables extends Migration
             if ($teams || config('permission.testing')) {
                 $table->unique([$columnNames['team_foreign_key'], 'name', 'guard_name']);
             } else {
-                $table->unique(['name', 'guard_name']);
+                $table->unique(['name']);
             }
         });
 

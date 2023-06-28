@@ -32,24 +32,24 @@
 					</div>
 					<div class="card-body">
 						<div class="row">
-                            <div class="form-group col-md-12">
-                                <label for="question">Question</label>
-                                <input type="text" name="question" class="form-control" id="question" required="required" value="{{ $faq->question }}">
-                                @error('question')
-                                <p class="text-danger">
-                                    {{ $message }}
-                                </p>
-                                @enderror
-                            </div>
-                            <div class="form-group col-md-12">
-                                <label for="answer">Answer</label>
-                                <textarea name="answer" class="form-control" id="answer" style="height: 80px">{{ $faq->answer }}</textarea>
-                                @error('answer')
-                                <p class="text-danger">
-                                    {{ $message }}
-                                </p>
-                                @enderror
-                            </div>
+							<div class="form-group col-md-6">
+								<label for="question">Question</label>
+								<input type="text" name="question" class="form-control" id="question" placeholder="Question" required="required" value="{{ $faq->question }}">
+								@error('question')
+									<p class="text-danger">
+										{{ $message }}
+									</p>
+								@enderror
+							</div>
+							<div class="form-group col-md-6">
+								<label for="answer">Answer</label>
+								<input type="text" name="answer" class="slug form-control" id="answer" placeholder="Answer" required="required" value="{{ $faq->answer }}">
+								@error('answer')
+									<p class="text-danger">
+										{{ $message }}
+									</p>
+								@enderror
+							</div>
 						</div>
 					</div>
 					<div class="card-footer">

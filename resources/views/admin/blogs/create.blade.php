@@ -12,7 +12,7 @@
 		</div>
 		<div class="accordion__body p-4 collapse show" id="with-slug" data-bs-parent="#accordion-slug">
 			<div class="row">
-				@if(!empty($screenOption)) 
+				@if(!empty($screenOption))
 					@forelse($screenOption as $key => $value)
 						<div class="col-md-2 form-group">
 							<label class="checkbox-inline">
@@ -113,14 +113,14 @@
 												@endphp
 												<div class="row xrow">
 													<div class="col-md-6 form-group">
-														<label for="BlogMetaName_{{ $count }}">{{ __('Title') }}</label> 
-														<input type="text" name="data[BlogMeta][{{ $count }}][title]" class="form-control" id="BlogMetaName_{{ $count }}" value="{{ $custom_field['title'] }}"> 
-													</div> 
-													<div class="col-md-6 form-group"> 
-														<label for="BlogMetaValue_{{ $count }}">{{ __('Value') }}</label> 
-														<textarea name="data[BlogMeta][{{ $count }}][value]" id="BlogMetaValue_{{ $count }}" class="form-control" rows="5">{{ isset($custom_field['value']) ? $custom_field['value'] : '' }}</textarea> 
-													</div> 
-													<div class="col-md-12 form-group"> 
+														<label for="BlogMetaName_{{ $count }}">{{ __('Title') }}</label>
+														<input type="text" name="data[BlogMeta][{{ $count }}][title]" class="form-control" id="BlogMetaName_{{ $count }}" value="{{ $custom_field['title'] }}">
+													</div>
+													<div class="col-md-6 form-group">
+														<label for="BlogMetaValue_{{ $count }}">{{ __('Value') }}</label>
+														<textarea name="data[BlogMeta][{{ $count }}][value]" id="BlogMetaValue_{{ $count }}" class="form-control" rows="5">{{ isset($custom_field['value']) ? $custom_field['value'] : '' }}</textarea>
+													</div>
+													<div class="col-md-12 form-group">
 														<button class="btn btn-danger CustomFieldRemoveButton" type="button">{{ __('Delete') }}</button>
 													</div>
 												</div>
@@ -170,7 +170,7 @@
 								<div class="form-group col-md-12">
 									<label for="slug">{{ __('Slug') }}</label>
 									<input type="text" name="data[Blog][slug]" class="form-control slug" id="slug" value="{{ old('data.Blog.slug') }}">
-								</div>			
+								</div>
 								@error('data.Blog.slug')
 									<p class="text-danger">
 										{{ $message }}
@@ -223,7 +223,7 @@
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 			<div class="col-md-4">
 				<div class="row">
 					<div class="col-md-12">
@@ -314,9 +314,9 @@
 								<span class="accordion-header-indicator"></span>
 							</div>
 							<div class="accordion__body p-4 collapse show" id="with-feature-image" data-bs-parent="#accordion-feature-image">
-								<div class="featured-img-preview img-parent-box"> 
+								<div class="featured-img-preview img-parent-box">
 
-									<img src="{{ asset('images/noimage.jpg') }}" class="avatar img-for-onchange"  alt="{{ __('Image') }}" width="100px" height="100px" title="{{ __('Image') }}"> 
+									<img src="{{ asset('images/noimage.jpg') }}" class="avatar img-for-onchange"  alt="{{ __('Image') }}" width="100px" height="100px" title="{{ __('Image') }}">
 
 									<input type="hidden" name="data[BlogMeta][0][title]" value="ximage" id="ContentMeta0Title">
 									<div class="form-file">

@@ -18,7 +18,7 @@
                             <a class="nav-link scroll" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll" href="about.html">About</a>
+                            <a class="nav-link scroll" href="/about-us">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link scroll" href="/services">Services</a>

@@ -4,36 +4,35 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Faq;
+use App\Models\Team;
+use App\Models\Testimonial;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class FaqsController extends Controller
+class TeamController extends Controller
 {
-    protected string $view_path = 'admin.faqs.';
-    protected string $base_route = 'admin.faqs.';
+    protected string $view_path = 'admin.teams.';
+    protected string $base_route = 'admin.teams.';
     protected object $model;
 
-    public function __construct(Faq $faq)
+    public function __construct(Team $team)
     {
-        $this->model = $faq;
+        $this->model = $team;
     }
 
     public function index()
     {
         $query = $this->model::query();
 
-        if(request()->filled('question')) {
-            $query->where('question', 'like', "%". request('question') ."%");
-        }
-        $faqs = $query->paginate(config('Reading.nodes_per_page'));
+        $teams = $query->paginate(config('Reading.nodes_per_page'));
 
-        return view($this->view_path . 'index', compact('faqs'));
+        return view($this->view_path . 'index', compact('teams'));
     }
 
     public function create()
     {
-        $page_title = 'Create Faq';
+        $page_title = 'Create Teams';
         $screenOption = config('page.ScreenOption');
         return view($this->view_path.'create', compact('page_title','screenOption'));
     }

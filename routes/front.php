@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('/about-us', function (){
+    return view('front.about_us');
+});
+
 Route::get('/faq', function (){
     return view('front.faq');
 });

@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\RolesController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -43,5 +47,13 @@ Route::middleware(['auth:sanctum', 'verified', 'permissions'])->prefix('admin')-
 	Route::get('/roles/delete/{id}', [RolesController::class, 'destroy'])->name('admin.roles.delete');
 
     Route::resource('faqs', FaqsController::class)->names('admin.faqs');
+
+    Route::resource('testimonials', TestimonialController::class)->names('admin.testimonials');
+
+    Route::resource('teams', TeamController::class)->names('admin.teams');
+
+    Route::resource('services', ServiceController::class)->names('admin.services');
+
+    Route::resource('clients', ClientController::class)->names('admin.clients');
 
 });
