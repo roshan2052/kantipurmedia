@@ -32,7 +32,7 @@
                         @csrf
                         <div class="row">
                             <div class="col-sm-6 m-sm-0 form-group">
-                                <input type="search" name="question" class="form-control" placeholder="Question" value="{{ old('question', request()->input('question')) }}">
+                                <input type="search" name="member_name" class="form-control" placeholder="Member Name" value="{{ old('member_name', request()->input('member_name')) }}">
                             </div>
                             <div class="col-sm-6 text-sm-end">
                                 <input type="submit" name="search" value="{{ __('Search') }}" class="btn btn-primary me-2">
@@ -51,9 +51,7 @@
 			<div class="card">
 				<div class="card-header">
 					<h4 class="card-title">Teams</h4>
-					@can('Controllers > BlogTagsController > admin_create')
-						<a href="{{ route('admin.teams.create') }}" class="btn btn-primary">Add Team</a>
-					@endcan
+                    <a href="{{ route('admin.teams.create') }}" class="btn btn-primary">Add Team</a>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
@@ -65,22 +63,20 @@
 									<th> <strong>Designation</strong> </th>
 									<th> <strong>Member Info</strong> </th>
 									<th> <strong> {!! DzHelper::dzSortable('created_at', __('Created')) !!} </strong> </th>
-									@canany(['Controllers > BlogTagsController > admin_edit', 'Controllers > BlogTagsController > admin_destroy'])
-										<th class="text-center"> <strong> {{ __('Actions') }} </strong> </th>
-                                    @endcanany
+                                    <th class="text-center"> <strong> {{ __('Actions') }} </strong> </th>
 								</tr>
 							</thead>
 							<tbody>
 								@forelse ($teams as $team)
 									<tr>
 										<td> {{ $loop->iteration }} </td>
-										<td> {{ $testim->member_name }} </td>
-										<td> {{ $testim->designation }} </td>
-										<td> {{ $testim->member_info }} </td>
-										<td> {{ $testim->created_at }} </td>
+										<td> {{ $team->member_name }} </td>
+										<td> {{ $team->designation }} </td>
+										<td> {{ $team->member_info }} </td>
+										<td> {{ $team->created_at }} </td>
                                         <td class="text-center d-flex justify-content-center">
-                                            <a href="{{ route('admin.teams.edit', $testim->id) }}" class="btn btn-primary shadow btn-xs sharp me-1" title="{{ __('Edit') }}"><i class="fas fa-pencil-alt"></i></a>
-                                            <form method="POST" action="{{ route('admin.teams.destroy', $testim->id) }}">
+                                            <a href="{{ route('admin.teams.edit', $team->id) }}" class="btn btn-primary shadow btn-xs sharp me-1" title="{{ __('Edit') }}"><i class="fas fa-pencil-alt"></i></a>
+                                            <form method="POST" action="{{ route('admin.teams.destroy', $team->id) }}">
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
 

@@ -17,7 +17,7 @@ use Storage;
 
 class BlogsController extends Controller
 {
-    
+
     /**
      * Display a listing of the resource.
      * @return Renderable
@@ -119,7 +119,7 @@ class BlogsController extends Controller
             'data.Blog.slug.unique'         => __('The slug has already been taken.'),
             'data.BlogMeta.0.value.mimes'   => __('The feature image must be a file of type: jpg, png, jpeg, gif.'),
         ];
-        
+
         $this->validate($request, $validation, $validationMsg);
         $blogData   = $request->input('data.Blog');
         $blogData['user_id'] = $request->input('data.Blog.user_id') ? $request->input('data.Blog.user_id') : Auth::id();
@@ -141,7 +141,7 @@ class BlogsController extends Controller
 
             if(!empty($blog_tags))
             {
-                foreach ($blog_tags as $blog_tag) 
+                foreach ($blog_tags as $blog_tag)
                 {
                     $BlogTag = BlogTag::where('title', '=', $blog_tag)->where('user_id', '=', \Auth::id())->first();
 
@@ -171,7 +171,7 @@ class BlogsController extends Controller
 
                     if($blog_meta['title'] != 'ximage')
                     {
-                        $blog->blog_meta()->create($blog_meta);
+                        $blog->blog_metas()->create($blog_meta);
                     }
                     else
                     {
@@ -183,7 +183,7 @@ class BlogsController extends Controller
                             $blog_meta['value'] = $fileName;
                         }
 
-                        $blog->blog_meta()->create($blog_meta);
+                        $blog->blog_metas()->create($blog_meta);
                     }
                 }
             }
@@ -263,8 +263,8 @@ class BlogsController extends Controller
             BlogSeo::updateOrCreate(
                 ['blog_id' => $blog->id],
                 [
-                    'blog_id'           => $blog->id, 
-                    'page_title'        => $request->input('data.BlogSeo.page_title'), 
+                    'blog_id'           => $blog->id,
+                    'page_title'        => $request->input('data.BlogSeo.page_title'),
                     'meta_keywords'     => $request->input('data.BlogSeo.meta_keywords'),
                     'meta_descriptions' => $request->input('data.BlogSeo.meta_descriptions'),
                     'blog_url'          => $request->input('data.BlogSeo.blog_url'),
@@ -275,7 +275,7 @@ class BlogsController extends Controller
 
             if(!empty($blog_tags))
             {
-                foreach ($blog_tags as $blog_tag) 
+                foreach ($blog_tags as $blog_tag)
                 {
                     $BlogTag = BlogTag::where('title', '=', $blog_tag)->where('user_id', '=', \Auth::id())->first();
 
@@ -300,7 +300,7 @@ class BlogsController extends Controller
             $blog->blog_tags()->sync($BlogTagIds);
 
             if(!empty($blog_metas))
-            {   
+            {
                 $blogMetaIds = array_column($blog_metas, 'meta_id');
                 BlogMeta::where('blog_id', '=', $id)->whereNotIn('id', $blogMetaIds)->delete();
 
@@ -332,7 +332,7 @@ class BlogsController extends Controller
                         }
                         $blog->blog_meta()->create($blog_meta);
                     }
-                    
+
                 }
             }
 
@@ -349,7 +349,7 @@ class BlogsController extends Controller
      */
     public function admin_destroy($id)
     {
-        
+
         $blog           = Blog::findOrFail($id);
         $res            = $blog->delete();
         if($res)
@@ -418,15 +418,15 @@ class BlogsController extends Controller
         $blank = "";
 
         if(!empty($parents))
-        {   
+        {
             $level++;
             $res[] = '<ul type="none">';
-        
+
             $i = 0;
             for($i=1; $i< $level; $i++) {
 
                 $blank .= " ";
-            
+
                 foreach($parents as $value)
                 {
                     $checkbox = '<input type="checkbox" name="data[BlogCategory][BlogCategory]" class="blog_categories" value="'.$value->id.'">';
@@ -434,7 +434,7 @@ class BlogsController extends Controller
                     $res[] = sprintf('<li>'.$blank.$checkbox.$title.' %s</li>', $this->blogCategoryTree($value->id, $level));
                 }
             }
-        
+
             $res[] = '</ul>';
         }
         return implode('', $res);
@@ -446,7 +446,7 @@ class BlogsController extends Controller
         $res        = !empty($res) ? $res : array();
         $blank = "";
         if(!empty($parents))
-        {   
+        {
             $level++;
             for($i=0; $i< $level; $i++) {
                 $blank .= " ";

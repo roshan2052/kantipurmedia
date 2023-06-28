@@ -20,12 +20,7 @@ class ClientController extends Controller
 
     public function index()
     {
-        $query = $this->model::query();
-
-        if(request()->filled('title')) {
-            $query->where('title', 'like', "%". request('title') ."%");
-        }
-        $clients = $query->paginate(config('Reading.nodes_per_page'));
+        $clients = $this->model::paginate(config('Reading.nodes_per_page'));
 
         return view($this->view_path . 'index', compact('clients'));
     }
@@ -33,13 +28,21 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'nullable|string|min:3',
-            'logo' => 'required|image|max:2048',
+            'name' => 'nullable|string|min:3',
+            'image' => 'required|image|max:2048',
         ]);
+
+        if($request->image) {
+            $OriginalName = $request->image->getClientOriginalName();
+            $fileName = time().'_'.$OriginalName;
+            $request->image->storeAs('public/clients/', $fileName);
+            $request['logo'] = $fileName;
+        }
 
         try {
             $this->model->create([
-                'title' => $request->title,
+                'name' => $request->name,
+                'logo' => $request->logo,
             ]);
             return redirect()->route($this->base_route . 'index')->with('success', 'Clients added successfully.');
         } catch (Exception $e) {

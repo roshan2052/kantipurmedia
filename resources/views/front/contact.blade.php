@@ -113,14 +113,15 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipiscinge lit sed do eiusm tempor incididunt ut labore.</p>
                         <div class="contact-form">
                             <form method="POST" action="contact-form.php">
+                                @csrf
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name:" name="name" id="name">
+                                    <input type="text" class="form-control" placeholder="Your Name:" name="name" id="name" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email:" name="email" id="email">
+                                    <input type="email" class="form-control" placeholder="Your Email:" name="email" id="email" required>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control textarea" placeholder="Add Comment:" rows="3" name="comments" id="comments"></textarea>
+                                    <textarea class="form-control textarea" placeholder="Message" rows="3" name="message" id="message" required></textarea>
                                 </div>
                                 <div class="submitform-button">
                                     <button type="submit" id="submit" class="submitform-btn hover-effect d-block">Send Message</button>

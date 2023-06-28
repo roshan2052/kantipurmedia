@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Faq;
 use App\Models\Team;
 use App\Models\Testimonial;
 use Exception;
@@ -25,6 +24,9 @@ class TeamController extends Controller
     {
         $query = $this->model::query();
 
+        if(request()->filled('member_name')) {
+            $query->where('member_name', 'like', "%". request('member_name') ."%");
+        }
         $teams = $query->paginate(config('Reading.nodes_per_page'));
 
         return view($this->view_path . 'index', compact('teams'));
@@ -39,25 +41,27 @@ class TeamController extends Controller
 
 
     public function show($id){
-        $faq = $this->model->find($id);
-        return view($this->view_path.'show', compact('faq'));
+        $team = $this->model->find($id);
+        return view($this->view_path.'show', compact('team'));
     }
 
 
     public function store(Request $request)
     {
-        $request->validate([
-            'question' => 'required',
-            'answer' => 'required',
+        $validatedData = $request->validate([
+            'member_name' => 'required|string|min:2',
+            'designation' => 'required|string|min:2',
+            'member_info' => 'nullable',
+            'image' => 'nullable|image|max:2048',
+            'facebook_url' => 'nullable|url',
+            'twitter_url' => 'nullable|url',
+            'insta_url' => 'nullable|url',
+            'linkedin_url' => 'nullable|url',
         ]);
 
         try {
-            $this->model->create([
-                'question' => $request->question,
-                'answer' => $request->answer,
-                'is_active' => $request->is_active ?? 1,
-            ]);
-            return redirect()->route($this->base_route.'index')->with('success', 'Faq added successfully.');
+            $this->model->create($validatedData);
+            return redirect()->route($this->base_route.'index')->with('success', 'Team added successfully.');
         } catch (Exception $e) {
             return redirect()->back()->with('error', __('Sorry, Something went wrong.'));
         }
@@ -65,17 +69,17 @@ class TeamController extends Controller
 
     public function edit($id)
     {
-        $faq = $this->model->findOrFail($id);
+        $team = $this->model->findOrFail($id);
 
-        return view($this->view_path . 'edit', compact('faq'));
+        return view($this->view_path . 'edit', compact('team'));
     }
 
     public function update(Request $request, $id)
     {
         try {
-            $faq = $this->model->findorFail($id);
-            $faq->update($request->all());
-            return redirect()->route($this->base_route.'index')->with('success', 'Faq Updated successfully.');
+            $team = $this->model->findorFail($id);
+            $team->update($request->all());
+            return redirect()->route($this->base_route.'index')->with('success', 'Team Updated successfully.');
         } catch (Exception $e) {
             return redirect()->back()->with('error', __('Sorry, Something went wrong.'));
         }
@@ -84,9 +88,9 @@ class TeamController extends Controller
     public function destroy($id)
     {
         try {
-            $faq = $this->model->findorFail($id);
-            $faq->delete();
-            return redirect()->back()->with('success', 'Faq Deleted successfully.');
+            $team = $this->model->findorFail($id);
+            $team->delete();
+            return redirect()->back()->with('success', 'Team Deleted successfully.');
         } catch (Exception $e) {
             return redirect()->back()->with('error', __('Something went wrong. Please try again.'));
         }

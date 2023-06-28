@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Client;
+use App\Models\Service;
+use App\Models\Team;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\BlogCategory;
@@ -29,14 +32,28 @@ class HomeController extends Controller
             }
         }
 
-
         if(optional(Auth::user())->hasRole(config('constants.roles.admin'))) {
-            $blogs   = Blog::with('blog_metas', 'blog_seo', 'blog_categories', 'blog_tags', 'user')->where(['status' => 1])->latest()->paginate(config('Reading.nodes_per_page'));
-        }else {
-            $blogs   = Blog::with('blog_metas', 'blog_seo', 'blog_categories', 'blog_tags', 'user')->where(['status' => 1])->where('visibility', '!=', 'Pr')->latest()->paginate(config('Reading.nodes_per_page'));
+            $blogs   = Blog::query()
+                ->with('blog_metas', 'blog_seo', 'blog_categories', 'blog_tags', 'user')
+                ->where(['status' => 1])
+                ->latest()
+                ->paginate(3);
+        } else {
+            $blogs = Blog::query()
+                ->with('blog_metas', 'blog_seo', 'blog_categories', 'blog_tags', 'user')
+                ->where(['status' => 1])
+                ->where('visibility', '!=', 'Pr')
+                ->latest()
+                ->paginate(3);
         }
 
-        return view('front.index', compact('blogs'));
+        $teams = Team::query()->get();
+
+        $services = Service::query()->get();
+
+        $clients = Client::query()->get();
+
+        return view('front.index', compact('blogs', 'teams', 'services', 'clients'));
     }
 
     public function detail(Request $request)
@@ -382,7 +399,7 @@ class HomeController extends Controller
                 return redirect()->back()->with('success', __('Contact Added successfully'));
             }
 
-            return redirect()->back()->with('error', __('There are some problem in form submition.'));
+            return redirect()->back()->with('error', __('There are some problem in form submittion.'));
         }
 
         return view('contact');

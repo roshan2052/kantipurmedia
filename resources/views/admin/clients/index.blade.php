@@ -26,9 +26,7 @@
 			<div class="card">
 				<div class="card-header">
 					<h4 class="card-title">Clients</h4>
-					@can('Controllers > BlogTagsController > admin_create')
-						<a href="{{ route('admin.clients.create') }}" class="btn btn-primary">Add Team</a>
-					@endcan
+                    <a href="{{ route('admin.clients.create') }}" class="btn btn-primary">Add Clients</a>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
@@ -39,26 +37,25 @@
 									<th> <strong>Name</strong> </th>
 									<th> <strong>Image</strong> </th>
 									<th> <strong> {!! DzHelper::dzSortable('created_at', __('Created')) !!} </strong> </th>
-									@canany(['Controllers > BlogTagsController > admin_edit', 'Controllers > BlogTagsController > admin_destroy'])
-										<th class="text-center"> <strong> {{ __('Actions') }} </strong> </th>
-                                    @endcanany
+                                    <th class="text-center"> <strong> {{ __('Actions') }} </strong> </th>
 								</tr>
 							</thead>
 							<tbody>
 								@forelse ($clients as $client)
 									<tr>
 										<td> {{ $loop->iteration }} </td>
-										<td> {{ $client->title }} </td>
-										<td> {{ $client->image }} </td>
+										<td> {{ $client->name ?? '-' }} </td>
+										<td>
+                                            <img src="{{ asset('storage/clients/'.$client->logo) }}" class="img-responsive img-rounded"  alt="{{ __('Image') }}" style="height: 50px; width: 50px">
+                                        </td>
 										<td> {{ $client->created_at }} </td>
-                                        <td class="text-center d-flex justify-content-center">
+                                        <td class="text-center d-flex">
                                             <a href="{{ route('admin.clients.edit', $client->id) }}" class="btn btn-primary shadow btn-xs sharp me-1" title="{{ __('Edit') }}"><i class="fas fa-pencil-alt"></i></a>
                                             <form method="POST" action="{{ route('admin.clients.destroy', $client->id) }}">
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
 
                                                 <button type="submit" class="btn btn-danger shadow btn-xs sharp delete-record" title="{{ __('Delete') }}"><i class="fa fa-trash"></i></button>
-
                                             </form>
 										</td>
 									</tr>

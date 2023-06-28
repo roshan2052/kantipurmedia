@@ -52,9 +52,9 @@
 						</div>
                         <div class="row">
                             <div class="form-group col-md-12">
-                                <label for="review">Bio</label>
-                                <textarea name="review" class="form-control" id="review" style="height: 80px">{{ old('review') }}</textarea>
-                                @error('review')
+                                <label for="member_info">Bio</label>
+                                <textarea name="member_info" class="form-control" id="member_info" style="height: 80px">{{ old('member_info') }}</textarea>
+                                @error('member_info')
                                 <p class="text-danger">
                                     {{ $message }}
                                 </p>
@@ -96,21 +96,21 @@
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label for="facebook_url">Facebook URL</label>
-                                        <input type="url" class="form-control" name="facebook_url" id="facebook_url">
+                                        <input type="url" class="form-control" name="facebook_url" id="facebook_url" value="{{ old('facebook_url') }}">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="twitter_url">Twitter URL</label>
-                                        <input type="url" class="form-control" name="twitter_url" id="twitter_url">
+                                        <input type="url" class="form-control" name="twitter_url" id="twitter_url" value="{{ old('twitter_url') }}">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label for="insta_url">Instagram URL</label>
-                                        <input type="url" class="form-control" name="insta_url" id="insta_url">
+                                        <input type="url" class="form-control" name="insta_url" id="insta_url" value="{{ old('insta_url') }}">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="linkedin_url">LinkedIn URL</label>
-                                        <input type="url" class="form-control" name="linkedin_url" id="linkedin_url">
+                                        <input type="url" class="form-control" name="linkedin_url" id="linkedin_url" value="{{ old('linkedin_url') }}">
                                     </div>
                                 </div>
                             </div>
