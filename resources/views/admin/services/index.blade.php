@@ -77,7 +77,7 @@
                                             <form method="POST" action="{{ route('admin.services.destroy', $service->id) }}">
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
-                                                <button type="submit" class="btn btn-danger btn-xs sharp delete-record" title="{{ __('Delete') }}"><i class="fa fa-trash"></i></button>
+                                                <button type="button" class="btn btn-danger btn-xs sharp delete-record" title="{{ __('Delete') }}"><i class="fa fa-trash"></i></button>
                                             </form>
 										</td>
 									</tr>
@@ -99,4 +99,14 @@
 </div>
 @endsection
 
-
+@push('inline-scripts')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(".delete-record").click(function(e){
+            e.preventDefault();
+            if (confirm('Are you sure you want to delete ?')) {
+                $(this).closest('form').submit();
+            }
+        });
+    </script>
+@endpush

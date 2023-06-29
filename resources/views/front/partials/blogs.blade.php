@@ -21,25 +21,25 @@
                             <a class="d-inline-block text-decoration-none meta" href="#">Admin -</a>
                         </li>
                         <li class="list-unstyled d-inline-block">
-                            <a class="d-inline-block text-decoration-none meta" href="#">January 29, 2022</a>
+                            <a class="d-inline-block text-decoration-none meta" href="#">{{ $blog->created_at}}</a>
                         </li>
                         <li class="list-unstyled d-inline-block">
                             <a class="d-inline-block text-decoration-none meta" href="#">- News</a>
                         </li>
                     </ul>
-                    <a class="text-decoration-none" href="single-post.html">
+                    <a class="text-decoration-none" href="{{ route('front.single_blog', ['slug' => $blog->slug]) }}">
                         <h4 class="font-weight-bold">{{ $blog->title }}</h4>
                     </a>
-                    <a class="read-more d-inline-block text-decoration-none" href="single-post.html">Read More
+                    <a class="read-more d-inline-block text-decoration-none" href="{{ route('front.single_blog', ['slug' => $blog->slug]) }}">Read More
                         <i class="far fa-long-arrow-alt-right position-relative"></i>
                     </a>
                 </div>
             </div>
             @endforeach
-            <div class="mx-auto mt-5">
-                {{ $blogs->links() }}
 
-            </div>
+        </div>
+        <div class="mx-auto mt-5 text-center">
+            {{ $blogs->links() }}
         </div>
 
     </div>

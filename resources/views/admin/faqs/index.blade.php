@@ -82,7 +82,7 @@
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
 
-                                                <button type="submit" class="btn btn-danger btn-xs sharp delete-record" title="{{ __('Delete') }}"><i class="fa fa-trash"></i></button>
+                                                <button type="button" class="btn btn-danger btn-xs sharp delete-record" title="{{ __('Delete') }}"><i class="fa fa-trash"></i></button>
 
                                             </form>
 										</td>
@@ -107,16 +107,14 @@
 
 @push('inline-scripts')
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
-
-    // let button = document.getElementsByClassName("delete-record");
-    //
-    // button.onClick = function(event) {
-    //     event.preventDefault()
-    //     if (confirm('Are you sure?')) {
-    //         event.target.closest('form').submit();
-    //     }
-    // };
+    $(".delete-record").click(function(e){
+        e.preventDefault();
+        if (confirm('Are you sure you want to delete ?')) {
+            $(this).closest('form').submit();
+        }
+    });
 </script>
 
 @endpush

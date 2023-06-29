@@ -18,10 +18,10 @@
                             <a class="nav-link scroll" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll" href="/about-us">About</a>
+                            <a class="nav-link scroll" href="{{ route('front.about_us') }}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll" href="/services">Services</a>
+                            <a class="nav-link scroll" href="{{ route('front.services') }}">Services</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,17 +29,17 @@
                             </a>
                             <div class="dropdown-menu list-unstyled hotline-dropdown" aria-labelledby="navbarDropdown">
                                 <ul class="dropdown-menu-list list-unstyled">
-                                    <li><a class="dropdown-item scroll hotline-menu" href="/faq">FAQ</a></li>
-                                    <li><a class="dropdown-item scroll hotline-menu" href="/testimonials">Testimonials</a></li>
-                                    <li><a class="dropdown-item scroll hotline-menu" href="/team">Team</a></li>
+                                    <li><a class="dropdown-item scroll hotline-menu" href="{{ route('front.faqs') }}">FAQ</a></li>
+                                    <li><a class="dropdown-item scroll hotline-menu" href="{{ route('front.testimonials') }}">Testimonials</a></li>
+                                    <li><a class="dropdown-item scroll hotline-menu" href="{{ route('front.teams') }}">Team</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll" href="/contact-us">Contact</a>
+                            <a class="nav-link scroll" href="{{ route('front.contact_us') }}">Contact</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link scroll" href="/blogs">
+                            <a class="nav-link scroll" href="{{ route('front.blogs') }}">
                                 Blogs
                             </a>
 {{--                            <div class="dropdown-menu list-unstyled hotline-dropdown" aria-labelledby="navbarDropdownMenu">--}}

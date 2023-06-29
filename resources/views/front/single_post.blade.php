@@ -38,9 +38,9 @@
                                     <!--post-image-->
                                 </div>
                                 <div class="post-item-description">
-                                    <h2 class="single-post-heading font_weight_600">Standard post with a single image</h2>
+                                    <h2 class="single-post-heading font_weight_600">{{ $blog->title }}</h2>
                                     <div class="post-meta">
-                                        <span class="post-meta-date color01"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
+                                        <span class="post-meta-date color01"><i class="fa fa-calendar-o"></i>{{ $blog->created_at }}</span>
                                         <span class="post-meta-comments color01"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
                                         <span class="post-meta-category color01"><a href=""><i class="fa fa-tag"></i>Lifestyle, Magazine</a></span>
                                         <div class="post-meta-share float-right">
@@ -62,15 +62,7 @@
                                         </div>
                                         <!--post-meta-->
                                     </div>
-                                    <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat. Fusce at velit id ligula pharetra laoreet. Ut nec metus a mi ullamcorper hendrerit. Nulla facilisi. Pellentesque sed nibh a quam accumsan dignissim quis quis urna. The most happiest time of the day!. Praesent id dolor dui, dapibus gravida elit. Donec consequat laoreet sagittis. Suspendisse ultricies ultrices viverra. Morbi rhoncus laoreet tincidunt. Mauris interdum convallis metus.M</p>
-                                    <div class="blockquote">
-                                        <p>The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.</p>
-                                        <small>by <cite>Albert Einstein</cite></small>
-                                    </div>
-                                    <p> The most happiest time of the day!. Praesent id dolor dui, dapibus gravida elit. Donec consequat laoreet sagittis. Suspendisse ultricies ultrices viverra. Morbi rhoncus laoreet tincidunt. Mauris interdum convallis metus. Suspendisse vel lacus est, sit amet tincidunt erat. Etiam purus sem, euismod eu vulputate eget, porta quis sapien. Donec tellus est, rhoncus vel scelerisque id, iaculis eu nibh.</p>
-                                    <p>Donec posuere bibendum metus. Quisque gravida luctus volutpat. Mauris interdum, lectus in dapibus molestie, quam felis sollicitudin mauris, sit amet tempus velit lectus nec lorem. Nullam vel mollis neque. The most happiest time of the day!. Nullam vel enim dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed tincidunt accumsan massa id viverra. Sed sagittis, nisl sit amet imperdiet convallis, nunc tortor consequat tellus, vel molestie neque nulla non ligula. Proin tincidunt tellus ac porta volutpat. Cras mattis congue lacus id bibendum. Mauris ut sodales libero. Maecenas feugiat sit amet enim in accumsan.</p>
-                                    <p>Duis vestibulum quis quam vel accumsan. Nunc a vulputate lectus. Vestibulum eleifend nisl sed massa sagittis vestibulum. Vestibulum pretium blandit tellus, sodales volutpat sapien varius vel. Phasellus tristique cursus erat, a placerat tellus laoreet eget. Fusce vitae dui sit amet lacus rutrum convallis. Vivamus sit amet lectus venenatis est rhoncus interdum a vitae velit.</p>
-                                    <!--post-item-description-->
+                                    {!! $blog->content !!}
                                 </div>
                                 <div class="post-tags">
                                     <a href="#">Life</a>
@@ -79,15 +71,7 @@
                                     <a href="#">Travel</a>
                                     <!--post-tags-->
                                 </div>
-                                <div class="post-navigation">
-                                    <a href="#" class="post-prev">
-                                        <div class="post-prev-title"><span>Previous Post</span></div>
-                                    </a>
-                                    <a href="#" class="post-next">
-                                        <div class="post-next-title"><span>Next Post</span></div>
-                                    </a>
-                                    <!--post-navigation-->
-                                </div>
+
                                 <div class="comments" id="comments">
                                     <div class="comment_number text-uppercase font_weight_600">
                                         Comments <span>(2)</span>

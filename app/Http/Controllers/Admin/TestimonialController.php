@@ -50,7 +50,7 @@ class TestimonialController extends Controller
         $validatedData = $request->validate([
             'client_name' => 'required|string|min:3|max:50',
             'client_designation' => 'required|min:3|max:50',
-            'review' => 'required|min:3|max:50',
+            'review' => 'required|min:3',
             'company_name' => 'required|min:3|max:50',
             'client_image' => 'nullable|image',
         ]);

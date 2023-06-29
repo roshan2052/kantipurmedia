@@ -76,6 +76,13 @@
             @endcanany
 
             <li>
+                <a class="ai-icon" href="{{ route('admin.about_us.create') }}" aria-expanded="false">
+                    <i class="fas fa-info"></i>
+                    <span class="nav-text">About Us</span>
+                </a>
+            </li>
+
+            <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="fas fa-user"></i>
                     <span class="nav-text">Testimonials</span>

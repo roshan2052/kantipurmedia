@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BlogsController;
 use App\Http\Controllers\Admin\BlogCategoriesController;
 use App\Http\Controllers\Admin\BlogTagsController;
+use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,35 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('front.about_us');
+Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('front.contact_us');
+Route::get('/teams', [HomeController::class, 'teams'])->name('front.teams');
+Route::get('/testimonials', [HomeController::class, 'testimonials'])->name('front.testimonials');
+Route::get('/services', [HomeController::class, 'services'])->name('front.services');
+Route::get('/faqs', [HomeController::class, 'faqs'])->name('front.faqs');
+Route::get('/blogs', [HomeController::class, 'blogs'])->name('front.blogs');
+Route::get('/blogs/{slug}', [HomeController::class, 'singleBlog'])->name('front.single_blog');
 
-Route::get('/about-us', function (){
-    return view('front.about_us');
-});
 
-Route::get('/faq', function (){
-    return view('front.faq');
-});
 
-Route::get('/team', function (){
-    return view('front.team');
-});
 
-Route::get('/testimonials', function (){
-    return view('front.testimonials');
-});
-
-Route::get('/services', function (){
-    return view('front.services');
-});
-
-Route::get('/contact-us', function (){
-    return view('front.contact');
-});
-
-Route::get('/blogs', function (){
-    return view('front.blogs');
-});
-
-Route::get('/blogs/{slug}', function (){
-    return view('front.single_post');
-});

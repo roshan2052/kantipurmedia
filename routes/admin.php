@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TeamController;
@@ -55,5 +56,7 @@ Route::middleware(['auth:sanctum', 'verified', 'permissions'])->prefix('admin')-
     Route::resource('services', ServiceController::class)->names('admin.services');
 
     Route::resource('clients', ClientController::class)->names('admin.clients');
+
+    Route::resource('about-us', AboutUsController::class)->names('admin.about_us');
 
 });

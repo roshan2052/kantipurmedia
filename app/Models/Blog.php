@@ -11,7 +11,7 @@ use Stevebauman\Purify\Facades\Purify;
 class Blog extends Model
 {
     use HasFactory;
-    
+
     protected $table = 'blogs';
     protected $fillable = [
         'user_id',
@@ -24,6 +24,10 @@ class Blog extends Model
         'status',
         'visibility',
         'publish_on',
+    ];
+
+    protected $casts = [
+        'created_at' => 'datetime'
     ];
 
     /**
@@ -120,7 +124,7 @@ class Blog extends Model
         $blog = Blog::select('id', 'slug', 'publish_on')->with('blog_categories', 'user')->firstWhere('id', $id);
 
         if ($blog) {
-            
+
             $date = explode( ' ', str_replace( array( '-', ':' ), ' ', (new Carbon($blog->publish_on))->format('Y-m-d H:i:s' )) );
             $rewritereplace = array(
                 $date[0],
@@ -134,7 +138,7 @@ class Blog extends Model
                 optional($blog->user)->fullname,
                 $blog->id,
             );
-            
+
             return $link = str_replace( $rewritecode, $rewritereplace, $permalink );
         }
 
@@ -145,14 +149,14 @@ class Blog extends Model
         $blog_category = BlogCategory::with('blog')->firstWhere('id', $id);
         return $link = optional($blog_category)->slug;
     }
-	
-	
+
+
 	public function laraBlogTagLink($id)
     {
         $blog_tags = BlogTag::with('blog')->firstWhere('id', $id);
         return $link = optional($blog_tags)->slug;
     }
-    
+
     public function author($id)
     {
         $author = User::firstWhere('id', $id);
@@ -193,7 +197,7 @@ class Blog extends Model
             ->limit($limit)
             ->orderBy($orderby, $order)
             ->get();
-            
+
         }else {
             $blogcategories  = BlogCategory::withCount('blog')
             ->limit($limit)
@@ -206,7 +210,7 @@ class Blog extends Model
     public function archiveBlogs()
     {
         $archives_query = Blog::selectRaw('YEAR(publish_on) year, MONTH(publish_on) month, MONTHNAME(publish_on) month_name, count(*) data');
-        
+
         if(!optional(Auth::user())->hasRole(config('constants.roles.admin'))) {
             $archives_query->where('visibility', '!=', 'Pr');
         }
@@ -220,7 +224,7 @@ class Blog extends Model
                 $archive->month = '0'.$archive->month;
             }
         }
-        return $archives;      
+        return $archives;
     }
 
     public function getCreatedAtAttribute( $value ) {

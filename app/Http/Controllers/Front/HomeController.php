@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Client;
+use App\Models\Faq;
 use App\Models\Service;
 use App\Models\Team;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\BlogCategory;
@@ -48,12 +50,11 @@ class HomeController extends Controller
         }
 
         $teams = Team::query()->get();
-
         $services = Service::query()->get();
-
         $clients = Client::query()->get();
+        $testimonials = Testimonial::query()->get();
 
-        return view('front.index', compact('blogs', 'teams', 'services', 'clients'));
+        return view('front.index', compact('blogs', 'teams', 'services', 'clients','testimonials'));
     }
 
     public function detail(Request $request)
@@ -403,5 +404,46 @@ class HomeController extends Controller
         }
 
         return view('contact');
+    }
+
+    public function services(){
+        $services = Service::get();
+        return view('front.services',compact('services'));
+    }
+
+    public function faqs(){
+        $faqs = Faq::get();
+        return view('front.faq',compact('faqs'));
+    }
+
+    public function blogs(){
+        $blogs = Blog::paginate(3);
+        return view('front.blogs',compact('blogs'));
+    }
+
+    public function singleBlog($slug){
+        $blog = Blog::where('slug',$slug)->first();
+        return view('front.single_post',compact('blog'));
+    }
+
+    public function testimonials(){
+        $testimonials = Testimonial::get();
+        return view('front.testimonials',compact('testimonials'));
+    }
+
+    public function teams(){
+        $teams = Team::get();
+        return view('front.team',compact('teams'));
+    }
+
+    public function aboutUs(){
+        $teams = Team::get();
+        $clients = Client::query()->get();
+
+        return view('front.about_us',compact('teams','clients'));
+    }
+
+    public function contactUs(){
+        return view('front.contact');
     }
 }
