@@ -5,18 +5,18 @@
             <div class="col-xl-5 col-lg-4 col-md-5 col-sm-6 text-sm-left text-center">
                 <div class="footer-logo-content">
                     <figure class="footer-logo">
-                        <img class="img-fluid" src="{{ asset('assets/images/humanx-logo.png') }}" alt="" style="width: 200px">
+                        @if (!empty(config('Site.logo')))
+                            <img class="img-fluid" src="{{ asset('storage/configuration-images/'.config('Site.logo')) }}" alt="" style="width: 200px">
+                        @else
+                            <img class="img-fluid" src="{{ asset('assets/images/humanx-logo.png') }}" alt="" style="width: 200px">
+                        @endif
                     </figure>
-                    <p class="text-size-16 mb-lg-4 mb-md-3 mb-3">We help business excel the experience delivered to customer, employee and users.</p>
+                    <p class="text-size-16 mb-lg-4 mb-md-3 mb-3">{{ config('Site.biography') }}</p>
                     <ul class="footer-logo-content-listing p-0 m-0">
-                        <li class="list-unstyled d-inline-block"><a class="d-inline-block" href="#"><i
-                                    class="fab fa-facebook-square"></i></a></li>
-                        <li class="list-unstyled d-inline-block"><a class="d-inline-block" href="#"><i
-                                    class="fab fa-twitter-square"></i></a></li>
-                        <li class="list-unstyled d-inline-block"><a class="d-inline-block" href="#"><i
-                                    class="fab fa-linkedin"></i></a></li>
-                        <li class="list-unstyled d-inline-block"><a class="d-inline-block" href="#"><i
-                                    class="fab fa-pinterest-square"></i></a></li>
+                        <li class="list-unstyled d-inline-block"><a class="d-inline-block" href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li class="list-unstyled d-inline-block"><a class="d-inline-block" href="#"><i class="fab fa-twitter-square"></i></a></li>
+                        <li class="list-unstyled d-inline-block"><a class="d-inline-block" href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="list-unstyled d-inline-block"><a class="d-inline-block" href="#"><i class="fab fa-pinterest-square"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -25,13 +25,13 @@
                     <h5 class="font-weight-normal">Quick Links</h5>
                     <ul class="list-unstyled mb-0">
                         <li><i class="fas fa-caret-right"></i><a class="text-decoration-none font-weight-normal"
-                                                                 href="index.html">Home</a></li>
+                                                                 href="/">Home</a></li>
                         <li><i class="fas fa-caret-right"></i><a class="text-decoration-none font-weight-normal"
-                                                                 href="team.html">Team</a></li>
+                                                                 href="{{ route('front.teams') }}">Team</a></li>
                         <li><i class="fas fa-caret-right"></i><a class="text-decoration-none font-weight-normal"
-                                                                 href="services.html">Services</a></li>
+                                                                 href="{{ route('front.services') }}">Services</a></li>
                         <li><i class="fas fa-caret-right"></i><a class="text-decoration-none font-weight-normal"
-                                                                 href="single-post.html">Blog</a></li>
+                                                                 href="{{ route('front.blogs') }}">Blog</a></li>
                     </ul>
                 </div>
             </div>
@@ -40,13 +40,13 @@
                     <h5 class="font-weight-normal">Support</h5>
                     <ul class="list-unstyled mb-0">
                         <li><i class="fas fa-caret-right"></i><a class="text-decoration-none font-weight-normal"
-                                                                 href="contact.html">Contact Us</a></li>
+                                                                 href="{{ route('front.contact_us') }}">Contact Us</a></li>
                         <li><i class="fas fa-caret-right"></i><a class="text-decoration-none font-weight-normal"
-                                                                 href="about.html">About Us</a></li>
+                                                                 href="{{ route('front.about_us') }}">About Us</a></li>
                         <li><i class="fas fa-caret-right"></i><a class="text-decoration-none font-weight-normal"
-                                                                 href="faq.html">FAQ</a></li>
+                                                                 href="{{ route('front.faqs') }}">FAQ</a></li>
                         <li><i class="fas fa-caret-right"></i><a class="text-decoration-none font-weight-normal"
-                                                                 href="testimonials.html">Testimonials</a></li>
+                                                                 href="{{ route('front.testimonials') }}">Testimonials</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,13 +55,13 @@
                     <h5 class="font-weight-normal">Get in Touch</h5>
                     <ul class="list-unstyled mb-0">
                         <li><span class="font-weight-bold">Email:</span>
-                            <a class="text-decoration-none font-weight-normal" href="mailto:info@hotline.com">info@humanx.com.np</a>
+                            <a class="text-decoration-none font-weight-normal" href="mailto:info@hotline.com">{{ config('Site.email') }}</a>
                         </li>
                         <li><span class="font-weight-bold">Phone:</span>
-                            <a class="text-decoration-none font-weight-normal" href="tel:+12345678900">+977-9802352059</a>
+                            <a class="text-decoration-none font-weight-normal" href="tel:+12345678900">{{ config('Site.contact') }}</a>
                         </li>
                         <li><span class="font-weight-bold">Address:</span>
-                            <a class="text-decoration-none font-weight-normal" href="#">Manbhawan, Lalitpur, Nepal</a>
+                            <a class="text-decoration-none font-weight-normal" href="#">{{ config('Site.location') }}</a>
                         </li>
                     </ul>
                 </div>
@@ -72,6 +72,7 @@
         </div>
     </div>
 </section>
+
 <!-- FOOTER BAR -->
 <div class="footer-bar text-center">
     <div class="container">

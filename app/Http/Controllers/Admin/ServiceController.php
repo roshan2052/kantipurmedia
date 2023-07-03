@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Service;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ServiceController extends Controller
 {
@@ -40,6 +41,7 @@ class ServiceController extends Controller
         try {
             $this->model->create([
                 'title' => $request->title,
+                'slug' => Str::slug($request->title),
                 'description' => $request->description,
             ]);
             return redirect()->route($this->base_route . 'index')->with('success', 'Services added successfully.');

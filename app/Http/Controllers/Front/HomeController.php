@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutUs;
 use App\Models\Client;
 use App\Models\Faq;
 use App\Models\Service;
@@ -408,7 +409,13 @@ class HomeController extends Controller
 
     public function services(){
         $services = Service::get();
-        return view('front.services',compact('services'));
+        $testimonials = Testimonial::get();
+        return view('front.services',compact('services','testimonials'));
+    }
+
+    public function singleService($slug){
+        $service = Service::where('slug',$slug)->first();
+        return view('front.single_service',compact('service'));
     }
 
     public function faqs(){
@@ -439,11 +446,27 @@ class HomeController extends Controller
     public function aboutUs(){
         $teams = Team::get();
         $clients = Client::query()->get();
+        $aboutUs = AboutUs::first();
 
-        return view('front.about_us',compact('teams','clients'));
+        return view('front.about_us',compact('teams','clients','aboutUs'));
     }
 
     public function contactUs(){
         return view('front.contact');
+    }
+
+    public function saveContactUs(){
+        request()->validate([
+            'name' => 'required|string|max:50',
+            'email' => 'required|email',
+            'message' => 'required',
+        ]);
+
+        try {
+            Contact::create(request()->all());
+            return back()->with('success', 'Thanks for contacting us.');
+        } catch (\Exception $e) {
+            return back()->with('error', __('Sorry, Something went wrong.'));
+        }
     }
 }

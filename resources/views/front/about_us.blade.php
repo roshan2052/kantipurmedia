@@ -45,7 +45,7 @@
                             <img class="img-fluid" src="assets/images/about-service-section-shape-img-1.png" alt="">
                         </figure>
                         <h2 class="mb-lg-4 mb-md-3 mb-2">About Us</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>{{ $aboutUs->description }}</p>
                     </div>
                 </div>
             </div>
@@ -68,33 +68,33 @@
                         <figure class="plus-icon float-center">
                             <img class="img-fluid" src="{{ asset('assets/images/plus-icon.png') }}" alt="">
                         </figure>
-                        <h4 class="number count d-inline-block">10</h4>
+                        <h4 class="number count d-inline-block">{{ $aboutUs->first_content }}</h4>
                         <h4 class="suffix d-inline-block">+</h4>
-                        <span class="customer d-block">New Customers</span>
+                        <span class="customer d-block">{{ $aboutUs->first_title }}</span>
                     </div>
                     <div class="col-6 col-md-3">
                         <figure class="plus-icon float-center">
                             <img class="img-fluid" src="{{ asset('assets/images/plus-icon.png') }}" alt="">
                         </figure>
-                        <h4 class="number count d-inline-block">10</h4>
+                        <h4 class="number count d-inline-block">{{ $aboutUs->second_content }}</h4>
                         <h4 class="suffix d-inline-block">+</h4>
-                        <span class="customer d-block">Satisfied clients</span>
+                        <span class="customer d-block">{{ $aboutUs->second_title }}</span>
                     </div>
                     <div class="col-6 col-md-3">
                         <figure class="plus-icon float-center">
                             <img class="img-fluid" src="{{ asset('assets/images/plus-icon.png') }}" alt="">
                         </figure>
-                        <h4 class="number count d-inline-block">50</h4>
+                        <h4 class="number count d-inline-block">{{ $aboutUs->third_content }}</h4>
                         <h4 class="suffix d-inline-block">+</h4>
-                        <span class="customer d-block">Projects delivered</span>
+                        <span class="customer d-block">{{ $aboutUs->third_title }}</span>
                     </div>
                     <div class="col-6 col-md-3">
                         <figure class="plus-icon float-center">
                             <img class="img-fluid" src="{{ asset('assets/images/plus-icon.png') }}" alt="">
                         </figure>
-                        <h4 class="number count d-inline-block">130</h4>
+                        <h4 class="number count d-inline-block">{{ $aboutUs->fourth_content }}</h4>
                         <h4 class="suffix d-inline-block">+</h4>
-                        <span class="customer d-block">Experts</span>
+                        <span class="customer d-block">{{ $aboutUs->fourth_title }}</span>
                     </div>
                 </div>
             </div>

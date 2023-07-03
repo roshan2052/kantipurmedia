@@ -32,25 +32,17 @@
                 <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12 d-md-flex align-items-lg-start align-items-md-center">
                     <div class="about-service-section-img-content position-relative wow bounceIn" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: bounceIn;">
                         <figure class="about-service-section-shape-img-2 mb-0 position-absolute">
-                            <img class="img-fluid" src="assets/images/about-service-section-shape-img-2.png" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/images/about-service-section-shape-img-2.png') }}" alt="">
                         </figure>
                         <figure class="about-service-section-main-img mb-0 position-relative">
-                            <img class="img-fluid" src="assets/images/contact-page-support-section-img.png" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/images/contact-page-support-section-img.png') }}" alt="">
                         </figure>
-                        <div class="counter-box position-absolute">
-                            <figure class="plus-icon float-left mb-0">
-                                <img class="img-fluid" src="assets/images/client-icon.png" alt="">
-                            </figure>
-                            <span class="number count d-inline-block">1675</span>
-                            <span class="suffix d-inline-block">+</span>
-                            <span class="customer d-block">Trusted Clients</span>
-                        </div>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 text-md-left text-center">
                     <div class="about-service-section-text position-relative">
                         <figure class="about-service-section-shape-img-1 mb-0 position-absolute">
-                            <img class="img-fluid" src="assets/images/about-service-section-shape-img-1.png" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/images/about-service-section-shape-img-1.png') }}" alt="">
                         </figure>
                         <h2 class="mb-lg-4 mb-md-3 mb-2">Get in Touch With Us</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscinge lit sed do eiusm tempor incididunt ut labore.</p>
@@ -58,13 +50,12 @@
                             <div class="row">
                                 <div class="col-md-3 col-12">
                                     <figure class="mb-0 text-center">
-                                        <img class="img-fluid" src="assets/images/email-icon.png" alt="">
+                                        <img class="img-fluid" src="{{ asset('assets/images/email-icon.png') }}" alt="">
                                     </figure>
                                 </div>
                                 <div class="col-md-9 col-12">
                                     <h4 class="font-weight-bold">Email:</h4>
-                                    <a class="d-block text-decoration-none text-size-16" href="mailto:support@hotline.com">support@hotline.com</a>
-                                    <a class="d-block text-decoration-none text-size-16" href="mailto:customers@hotline.com">customers@hotline.com</a>
+                                    <a class="d-block text-decoration-none text-size-16" href="{{ config('Site.email') }}">{{ config('Site.email') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -72,13 +63,12 @@
                             <div class="row">
                                 <div class="col-md-3 col-12">
                                     <figure class="mb-0 text-center">
-                                        <img class="img-fluid" src="assets/images/phone-icon.png" alt="">
+                                        <img class="img-fluid" src="{{ asset('assets/images/phone-icon.png') }}" alt="">
                                     </figure>
                                 </div>
                                 <div class="col-md-9 col-12">
                                     <h4 class="font-weight-bold">Phone:</h4>
-                                    <a class="d-block text-decoration-none text-size-16" href="tel:+12345678901">+123 45 678 901</a>
-                                    <a class="d-block text-decoration-none text-size-16" href="tel:+23456789012">+234 56 789 012</a>
+                                    <a class="d-block text-decoration-none text-size-16" href="{{ config('Site.contact') }}">{{ config('Site.contact') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -86,12 +76,12 @@
                             <div class="row">
                                 <div class="col-md-3 col-12">
                                     <figure class="mb-0 text-center">
-                                        <img class="img-fluid" src="assets/images/mail-icon.png" alt="">
+                                        <img class="img-fluid" src="{{ asset('assets/images/mail-icon.png') }}" alt="">
                                     </figure>
                                 </div>
                                 <div class="col-md-9 col-12">
-                                    <h4 class="font-weight-bold">Mailing Address:</h4>
-                                    <span class="d-block text-size-16">121 King Street Melbourne, 3000, Australia</span>
+                                    <h4 class="font-weight-bold">Address:</h4>
+                                    <span class="d-block text-size-16">{{ config('Site.location') }}</span>
                                 </div>
                             </div>
                         </div>
@@ -107,12 +97,12 @@
                 <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 order-xl-1 order-lg-1 order-md-1 order-sm-2 order-2 text-md-left text-center">
                     <div class="customer-base-section-text position-relative">
                         <figure class="contact-form-shape-img-1 mb-0 position-absolute">
-                            <img class="img-fluid" src="assets/images/contact-form-shape-img-1.png" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/images/contact-form-shape-img-1.png') }}" alt="">
                         </figure>
-                        <h2 class="mb-lg-4 mb-md-3 mb-2">How Can We Help Your Business To Grow?</h2>
+                        <h2 class="mb-lg-4 mb-md-3 mb-4">How Can We Help Your Business To Grow?</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscinge lit sed do eiusm tempor incididunt ut labore.</p>
                         <div class="contact-form">
-                            <form method="POST" action="contact-form.php">
+                            <form method="POST" action="{{ route('front.contact_us.save') }}">
                                 @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Your Name:" name="name" id="name" required>
@@ -134,10 +124,10 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 order-xl-2 order-lg-2 order-md-2 order-sm-1 order-1 d-md-flex align-items-lg-start align-items-md-center">
                     <div class="customer-base-section-img-content position-relative wow bounceIn" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: bounceIn;">
                         <figure class="customer-base-section-shape-img-2 mb-0 position-absolute">
-                            <img class="img-fluid" src="assets/images/customer-base-section-shape-img-2.png" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/images/customer-base-section-shape-img-2.png') }}" alt="">
                         </figure>
                         <figure class="customer-base-section-main-img mb-0 text-right position-relative">
-                            <img class="img-fluid" src="assets/images/contact-form-section-img.png" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/images/contact-form-section-img.png') }}" alt="">
                         </figure>
                     </div>
                 </div>

@@ -76,13 +76,6 @@
             @endcanany
 
             <li>
-                <a class="ai-icon" href="{{ route('admin.about_us.create') }}" aria-expanded="false">
-                    <i class="fas fa-info"></i>
-                    <span class="nav-text">About Us</span>
-                </a>
-            </li>
-
-            <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="fas fa-user"></i>
                     <span class="nav-text">Testimonials</span>
@@ -135,6 +128,13 @@
                     <li><a href="{{ route('admin.faqs.index') }}">List</a></li>
                     <li><a href="{{ route('admin.faqs.create') }}">Add New</a></li>
                 </ul>
+            </li>
+
+            <li>
+                <a class="ai-icon" href="{{ route('admin.about_us.create') }}" aria-expanded="false">
+                    <i class="fas fa-info"></i>
+                    <span class="nav-text">About Us</span>
+                </a>
             </li>
 
             <li class="nav-label">{{ __('Admin') }}</li>

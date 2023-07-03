@@ -4,7 +4,11 @@
             <nav class="navbar navbar-expand-lg navbar-light p-0">
                 <a class="navbar-brand" href="/">
                     <figure class="navbar-logo mb-0">
-                        <img class="img-fluid" src="{{ asset('assets/images/humanx-logo.png') }}" alt="" style="width: 200px">
+                        @if (!empty(config('Site.logo')))
+                            <img class="img-fluid" src="{{ asset('storage/configuration-images/'.config('Site.logo')) }}" alt="" style="width: 200px">
+                        @else
+                            <img class="img-fluid" src="{{ asset('assets/images/humanx-logo.png') }}" alt="" style="width: 200px">
+                        @endif
                     </figure>
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -22,7 +22,7 @@
                         </figure>
                         <h4 class="font-weight-bold">{{ $service->title }}</h4>
                         <p class="text-size-16">{{ $service->description }}</p>
-                        <a class="d-inline-block text-decoration-none" href="services.html">Read More
+                        <a class="d-inline-block text-decoration-none" href="{{ route('front.single_service', ['slug' => $service->slug]) }}">Read More
                             <i class="far fa-long-arrow-alt-right position-relative"></i>
                         </a>
                     </div>
