@@ -14,8 +14,7 @@
                         <h1 class="text-white mb-lg-4 mb-3">Blog - This is blogs page</h1>
                         <div class="breadcrum">
                             <span class="font-weight-normal d-inline-block text-white">Home / </span>
-                            <span
-                                class="breadcrum-active font-weight-normal d-inline-block text-white">Infinite Scroll</span>
+                            <span class="breadcrum-active font-weight-normal d-inline-block text-white">Infinite Scroll</span>
                         </div>
                     </div>
                 </div>

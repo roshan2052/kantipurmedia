@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row position-relative">
                 <figure class="review-section-shape-img-1 position-absolute mb-0">
-                    <img class="img-fluid" src="assets/images/review-section-shape-img-1.png" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/images/review-section-shape-img-1.png') }}" alt="">
                 </figure>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="review-section-box w-100 position-relative">

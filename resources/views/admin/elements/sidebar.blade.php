@@ -203,6 +203,9 @@
 
             @php
                 $configuration_menu = HelpDesk::configuration_menu();
+                $configuration_menu = array_filter($configuration_menu,function($menu){
+                    return in_array($menu,['Site','Social','Settings', 'Theme']);
+                });
             @endphp
 
             @if(!empty($configuration_menu))

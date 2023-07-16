@@ -32,17 +32,17 @@
                 <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12 d-md-flex align-items-lg-start align-items-md-center">
                     <div class="about-service-section-img-content position-relative wow bounceIn" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: bounceIn;">
                         <figure class="about-service-section-shape-img-2 mb-0 position-absolute">
-                            <img class="img-fluid" src="assets/images/about-service-section-shape-img-2.png" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/images/about-service-section-shape-img-2.png') }}" alt="">
                         </figure>
                         <figure class="about-service-section-main-img mb-0 position-relative">
-                            <img class="img-fluid" src="assets/images/contact-page-support-section-img.png" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/images/contact-page-support-section-img.png') }}" alt="">
                         </figure>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 text-md-left text-center">
                     <div class="about-service-section-text position-relative">
                         <figure class="about-service-section-shape-img-1 mb-0 position-absolute">
-                            <img class="img-fluid" src="assets/images/about-service-section-shape-img-1.png" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/images/about-service-section-shape-img-1.png') }}" alt="">
                         </figure>
                         <h2 class="mb-lg-4 mb-md-3 mb-2">About Us</h2>
                         <p>{{ $aboutUs->description }}</p>

@@ -33,7 +33,7 @@
                             <div class="post-item-wrap">
                                 <div class="post-image" data-aos="fade-up">
                                     <a href="#">
-                                        <img alt="" src="assets/images/post-featured.jpg">
+                                        <img alt="" src="{{ asset('assets/images/post-featured.jpg') }}">
                                     </a>
                                     <!--post-image-->
                                 </div>
@@ -114,7 +114,7 @@
                                     <div class="tab-pane fade show active" id="popular" role="tabpanel">
                                         <div class="post-thumbnail-list">
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img01.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img01.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">A true story, that never been told!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 6m ago</span>
@@ -124,7 +124,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img02.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img02.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">Beautiful nature, and rare feathers!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
@@ -134,7 +134,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img03.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img03.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">The most happiest time of the day!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
@@ -150,7 +150,7 @@
                                     <div class="tab-pane fade" id="featured" role="tabpanel">
                                         <div class="post-thumbnail-list">
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img03.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img03.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">Beautiful nature, and rare feathers!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
@@ -160,7 +160,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img02.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img02.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">The most happiest time of the day!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
@@ -170,7 +170,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img01.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img01.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">New costs and rise of the economy!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
@@ -186,7 +186,7 @@
                                     <div class="tab-pane fade" id="recent" role="tabpanel">
                                         <div class="post-thumbnail-list">
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img02.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img02.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">The most happiest time of the day!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
@@ -196,7 +196,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img01.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img01.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">New costs and rise of the economy!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
@@ -206,7 +206,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img03.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img03.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">Beautiful nature, and rare feathers!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
@@ -251,10 +251,6 @@
                                 <a href="#">Branding</a>
                                 <a href="#">HTML</a>
                                 <a href="#">Clean</a>
-                                <a href="#">Peace</a>
-                                <a href="#">Love</a>
-                                <a href="#">CSS3</a>
-                                <a href="#">jQuery</a>
                                 <!--tags-->
                             </div>
                             <!--widget-->

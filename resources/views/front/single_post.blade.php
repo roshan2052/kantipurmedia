@@ -33,7 +33,7 @@
                             <div class="post-item-wrap">
                                 <div class="post-image" data-aos="fade-up">
                                     <a href="#">
-                                        <img alt="" src="assets/images/post-featured.jpg">
+                                        <img alt="" src="{{ asset('assets/images/post-featured.jpg') }}">
                                     </a>
                                     <!--post-image-->
                                 </div>
@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="comment-list">
                                         <div class="comment" id="comment-1">
-                                            <div class="image" data-aos="flip-left"><img alt="" src="assets/images/review1.jpg" class="avatar"></div>
+                                            <div class="image" data-aos="flip-left"><img alt="" src="{{ asset('assets/images/review1.jpg') }}" class="avatar"></div>
                                             <div class="text">
                                                 <h5 class="name font_weight_700">John Doe</h5>
                                                 <span class="comment_date">Posted at 15:32h, 06 December</span>
@@ -91,7 +91,7 @@
                                                 <!--text-->
                                             </div>
                                             <div class="comment" id="comment-1-1">
-                                                <div class="image" data-aos="flip-left"><img alt="" src="assets/images/review2.jpg" class="avatar"></div>
+                                                <div class="image" data-aos="flip-left"><img alt="" src="{{ asset('assets/images/review2.jpg') }}" class="avatar"></div>
                                                 <div class="text">
                                                     <h5 class="name font_weight_700">John Doe</h5>
                                                     <span class="comment_date">Posted at 15:32h, 06 December</span>
@@ -105,7 +105,7 @@
                                                 <!--comment-->
                                             </div>
                                             <div class="comment" id="comment-1-2">
-                                                <div class="image" data-aos="flip-left"><img alt="" src="assets/images/review1.jpg" class="avatar"></div>
+                                                <div class="image" data-aos="flip-left"><img alt="" src="{{ asset('assets/images/review1.jpg') }}" class="avatar"></div>
                                                 <div class="text">
                                                     <h5 class="name font_weight_700">John Doe</h5>
                                                     <span class="comment_date">Posted at 15:32h, 06 December</span>
@@ -121,7 +121,7 @@
                                             <!--comment-->
                                         </div>
                                         <div class="comment" id="comment-2">
-                                            <div class="image" data-aos="flip-left"><img alt="" src="assets/images/review2.jpg" class="avatar"></div>
+                                            <div class="image" data-aos="flip-left"><img alt="" src="{{ asset('assets/images/review2.jpg') }}" class="avatar"></div>
                                             <div class="text">
                                                 <h5 class="name font_weight_700">John Doe</h5>
                                                 <span class="comment_date">Posted at 15:32h, 06 December</span>
@@ -240,7 +240,7 @@
                                     <div class="tab-pane fade show active" id="popular" role="tabpanel">
                                         <div class="post-thumbnail-list">
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img01.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img01.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">A true story, that never been told!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 6m ago</span>
@@ -250,7 +250,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img02.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img02.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">Beautiful nature, and rare feathers!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
@@ -260,7 +260,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img03.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img03.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">The most happiest time of the day!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
@@ -276,7 +276,7 @@
                                     <div class="tab-pane fade" id="featured" role="tabpanel">
                                         <div class="post-thumbnail-list">
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img03.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img03.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">Beautiful nature, and rare feathers!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
@@ -286,7 +286,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img02.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img02.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">The most happiest time of the day!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
@@ -296,7 +296,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img01.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img01.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">New costs and rise of the economy!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
@@ -312,7 +312,7 @@
                                     <div class="tab-pane fade" id="recent" role="tabpanel">
                                         <div class="post-thumbnail-list">
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img02.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img02.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">The most happiest time of the day!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
@@ -322,7 +322,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img01.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img01.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">New costs and rise of the economy!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
@@ -332,7 +332,7 @@
                                                 <!--post-thumbnail-entry-->
                                             </div>
                                             <div class="post-thumbnail-entry">
-                                                <img data-aos="fade-up" alt="" src="assets/images/side_post_img03.jpg">
+                                                <img data-aos="fade-up" alt="" src="{{ asset('assets/images/side_post_img03.jpg') }}">
                                                 <div class="post-thumbnail-content">
                                                     <a href="#">Beautiful nature, and rare feathers!</a>
                                                     <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
